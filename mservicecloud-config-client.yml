@@ -10,7 +10,20 @@ server:
 spring:
   profiles: dev
   application:
-    name: mservicecloud-config-client
+    name: mservicecloud-config-client-dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+---
+server:
+  port: 8082
+  
+spring:
+  profiles: test
+  application:
+    name: mservicecloud-config-client-test
 
 eureka:
   client:
